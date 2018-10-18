@@ -1,0 +1,19 @@
+pages:
+  - state:
+      charset: static/object2/5
+      direction: left
+      blocking: true
+      trigger: Click
+    actions:
+      - type: message
+        message:
+          text: 'Wygląda jak kamień...'
+      - type: message
+        message:
+          text: 'Pachnie jak kamień...'
+      - type: message
+        message:
+          text: 'Jest ciężkie jak kamień...'
+      - type: message
+        message:
+          text: 'Ewidentnie to kamień!'

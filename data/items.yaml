@@ -1,0 +1,33 @@
+idSeq: 5
+items:
+  - id: 0
+    type: Armor
+    resource: dynamic/shared/armor/0
+    name: Uniform geeka
+    description: Orginalna koszula I love Star Wars oraz wegańskie spodnie do kompletu.
+    attributes:
+      defense: 10
+  - id: 1
+    type: Armor
+    resource: dynamic/shared/armor/1
+    name: Uniform programisty
+    description: Spocony T-Shirt z krótkimi spodenkami oraz skarpetkami w binarny kod.
+    attributes:
+      defense: 10
+  - id: 2
+    type: Armor
+    resource: dynamic/shared/armor/2
+    name: Uniform adopsa
+    description: Jakieś tam jeansy czy coś.
+    attributes:
+      defense: 10
+  - type: Armor
+    name: Czapka zagłady
+    description: Random item description
+    resource: dynamic/shared/hat/2
+    id: 3
+  - type: Quests
+    name: Przycisk do drzwi
+    description: Random item description
+    resource: dynamic/shared/hat/7
+    id: 4

@@ -1,0 +1,28 @@
+chest_switch: &chest_switch '{{ map.id }}/{{ entity.id }}/chest'
+pages:
+  - state:
+      charset: &chest static/object1/7
+      direction: down
+      blocking: true
+      trigger: Click
+    actions:
+      - type: switch
+        key: *chest_switch
+        state: true
+        expireIn: 5
+      - type: message
+        message:
+          text: 'Oho znalazłem: Coś item'
+  - state:
+      charset: *chest
+      direction: up
+      blocking: true
+      trigger: Click
+    conditions:
+      - type: switch
+        key: *chest_switch
+        state: true
+    actions:
+      - type: message
+        message:
+          text: 'Hmm, nic tu nie ma...'

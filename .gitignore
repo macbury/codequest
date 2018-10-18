@@ -1,0 +1,10 @@
+node_modules/**/*
+dist/**/*
+.DS_Store
+*.log
+tmp/**/*
+.docker/**/*
+.env
+docs/**/*
+src/shared/finalProtocol.js
+src/raw/processed/**/*.png

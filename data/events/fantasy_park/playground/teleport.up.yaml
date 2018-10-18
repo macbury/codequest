@@ -1,0 +1,9 @@
+pages:
+  - state:
+      trigger: Touch
+    actions:
+    - type: teleport
+      location:
+        map: fantasy_park/playground
+        col: 12
+        row: 23

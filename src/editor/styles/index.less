@@ -1,0 +1,256 @@
+html, body, #editor, #editor > div, .ui.fluid.container {
+  height: 100%;
+}
+
+.main-container {
+  padding-top: 44px;
+}
+
+.Select-input input {
+  border: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.itemListPreview {
+  padding: 0 5px;
+  margin-right: 10px;
+  border: 1px dashed #ddd;
+  border-radius: 3px;
+  float: left;
+  & > div {
+    margin: 0px !important;
+  }
+}
+
+.diagramEditor {
+  height: 100%;
+  margin: -14px;
+
+  .srd-diagram {
+    height: 100%;
+    background-color: #3c3c3c !important;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+    background-size: 50px 50px;
+  }
+}
+
+.mapScroller {
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  overflow: scroll;
+
+  .mapContainer {
+    .mapEditor {
+      position: fixed;
+
+      canvas {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+.mapTree {
+  height: 100%;
+  margin: -14px;
+  background-color: rgb(33, 37, 43);
+  overflow-y: scroll;
+  & > ul {
+    height: 100%;
+    padding: 14px 0px 14px 0px !important;
+    & > li > div {
+      padding-left: 14px !important;
+    }
+  }
+}
+
+.ui.grid {
+  min-height: 100%;
+}
+
+.node-action {
+  background: #00423c;
+  position: relative;
+
+  &.node-switch {
+    min-height: 90px;
+  }
+
+  .node-left, .node-right {
+    width: 50px;
+    position: absolute;
+
+    .node-port {
+      margin-top: 4px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+      z-index: 100;
+      overflow: hidden;
+
+      span {
+        display: inline-block;
+        font-weight: bold;
+
+      }
+      .srd-port {
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        height: 20px;
+        margin-bottom: -5px;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+        }
+
+        &.srd-port--selected {
+          background: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
+
+  .node-inner {
+    min-height: 35px;
+    min-width: 70px;
+
+    .node-padded {
+      padding: 10px;
+    }
+  }
+
+  .node-inner.node-with-inputs {
+    margin-left: 50px;
+  }
+
+  .node-inner.node-with-outputs {
+    margin-right: 50px;
+  }
+
+  .node-left {
+    .node-port {
+      padding-right: 5px;
+      margin-left: -17px;
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .node-right {
+    right: 0px;
+    text-align: right;
+
+    .node-port {
+      padding-left: 5px;
+      margin-right: -17px;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    display: block;
+    width: 420px;
+    margin: 10px 10px 5px 10px;
+  }
+
+  textarea {
+    padding: 5px;
+    width: 420px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    display: block;
+  }
+
+  .srd-port.input {
+    position: absolute;
+    top: 50%;
+    left: -17px;
+    border-radius: 10px 0px 0px 10px;
+  }
+
+  .srd-port.output {
+    position: absolute;
+    top: 50%;
+    right: -17px;
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
+.charas-select {
+  margin-bottom: 10px;
+  .current-charas-button, .charas-option {
+    width: 36px;
+    height: 36px;
+    zoom: 2;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background: transparent url('./transparency.png') repeat;
+    image-rendering: pixelated;
+    &:hover {
+      border-color: black;
+    }
+  }
+
+  .charas-option {
+    margin: 0px auto 10px auto;
+
+    &.charas-option-selected {
+      border-color: #2185d0;
+    }
+  }
+}
+
+.node-action {
+  .face-select {
+    margin: 10px;
+  }
+}
+
+.face-select {
+  margin-bottom: 10px;
+  .current-face-button, .face-option {
+    width: 52px;
+    height: 52px;
+    zoom: 2;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background: transparent url('./transparency.png') repeat;
+    image-rendering: pixelated;
+    &:hover {
+      border-color: black;
+    }
+  }
+
+  .face-option {
+    margin: 0px auto 10px auto;
+
+    &.face-option-selected {
+      border-color: #2185d0;
+    }
+  }
+}
+
+.modal {
+  margin-top: 0px !important;
+}

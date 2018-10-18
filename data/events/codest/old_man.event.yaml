@@ -1,0 +1,24 @@
+test_switch: &test_switch '{{ map.id }}/{{ entity.id }}/oldman'
+pages:
+  - state:
+      charset: &oldman static/people1/5 #oldman
+      direction: up
+      blocking: true
+      trigger: Click
+    actions:
+      - type: switch
+        key: *test_switch
+        state: true
+        expireIn: 10
+      - type: message
+        message:
+          text: 'Sprawdzam czy działa przeładowywanie eventów....'
+      - type: message
+        message:
+          text: 'Hello there! You are on {{ map.name }}'
+      - type: message
+        message:
+          text: 'How do you feel with this?'
+      - type: message
+        message:
+          text: 'This is awesome!?'

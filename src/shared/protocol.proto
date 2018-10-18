@@ -1,0 +1,68 @@
+import "google/protobuf/any.proto";
+
+message Action {
+  required string type = 1;
+  optional string payload = 2;
+}
+
+message Error {
+  required string type = 1;
+  optional string message = 2;
+}
+
+message TriggerEvent {
+  required string id = 2;
+}
+
+message Location {
+  required uint32 col = 1;
+  required uint32 row = 2;
+  optional string map = 3;
+}
+
+message Body {
+  required uint32 head = 1;
+  required uint32 hair = 2;
+  required bool male = 3;
+}
+
+message Equipment {
+  optional uint32 armor = 1;
+}
+
+message Target {
+  required uint32 col = 1;
+  required uint32 row = 2;
+  optional string trigger = 3;
+  optional uint32 direction = 4;
+}
+
+message Entity {
+  required string id = 3;
+  optional uint32 trigger = 11;
+  optional uint32 status = 8;
+  optional uint32 latency = 7;
+  optional string charset = 10;
+  optional uint32 direction = 9;
+  optional Location location = 1;
+  optional Target target = 2;
+  optional uint32 speed = 4;
+  optional bool entered = 5;
+  optional bool leaved = 6;
+  optional bool blocking = 12;
+  optional Equipment equipment = 13;
+  optional Body body = 14;
+}
+
+message World {
+  repeated Entity entities = 1;
+}
+
+message WorldDeltaState {
+  required uint32 latency = 1;
+  required uint64 stamp = 2;
+  required string currentPlayerId = 5;
+
+  repeated Action actions = 3;
+  optional World world = 4;
+}

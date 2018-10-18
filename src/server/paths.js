@@ -1,0 +1,10 @@
+import path from 'path'
+export const DIST_DIR = path.join(__dirname, '../../dist/client')
+export const HTML_FILE = path.join(DIST_DIR, 'index.html')
+export const ASSETS_DIR = path.join(__dirname, '../../assets')
+export const DATA_DIR = path.join(__dirname, '../../data')
+export const TMP_DIR = path.join(__dirname, '../../tmp')
+export const SESSION_DIR = path.join(TMP_DIR, 'sessions')
+export const MAPS_DIR = path.join(DATA_DIR, 'maps')
+export const TILESETS_PATH = path.join(MAPS_DIR, 'tilesets')
+export const ITEMS_PATH = path.join(DATA_DIR, 'items.yaml')

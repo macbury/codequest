@@ -1,0 +1,16 @@
+pages:
+  - state:
+      charset: &oldman static/object1/1
+      direction: down
+      blocking: true
+      trigger: Click
+    actions:
+      - type: message
+        message:
+          text: 'Hmm...'
+      - type: message
+        message:
+          text: 'No kurwa...'
+      - type: message
+        message:
+          text: 'Tak jak myślałem. Zamknięte...'

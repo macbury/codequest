@@ -1,0 +1,29 @@
+pages:
+  - state:
+      charset: &oldman_charset static/people1/5 #oldman_charset
+      direction: down
+      blocking: true
+      trigger: Click
+    actions:
+      - type: message
+        message:
+          label: '???'
+          face: &oldman_face 'People1/9'
+          text: |
+            Witaj!
+            Mam na imię Eugeniusz!
+      - type: message
+        message:
+          label: &oldman_label 'Eugeniusz'
+          face: *oldman_face
+          text: Jestem kapłanem tego lochu...
+      - type: message
+        message:
+          label: *oldman_label
+          face: *oldman_face
+          text: |
+            Zapewnie zastanawiasz się co tutaj robisz. Widzisz, znajdujesz się na drugim piętrze Fantasy Parku.
+            Te drzwi u góry prowadzą do wyjścia jednakże są one zamknięte.
+      - type: message
+        message:
+          text: Ten tekst jest chujowy jak nieszczęscie
